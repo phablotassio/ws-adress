@@ -1,8 +1,8 @@
 package com.phablo.adress.ws.service;
 
 import com.phablo.adress.ws.controller.AdressFeingService;
-import com.phablo.adress.ws.model.Adress;
 import com.phablo.adress.ws.model.dto.AdressDTO;
+import com.phablo.adress.ws.model.mapper.AdressMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,23 +12,11 @@ public class AdressService {
     @Autowired
     private AdressFeingService adressFeingService;
 
-    public Adress getAdress(String cep){
-        AdressDTO adressDTO = adressFeingService.getAdress(cep);
-        return converDTOtoAdress(adressDTO);
+    @Autowired
+    private AdressMapper adressMapper;
+
+    public AdressDTO getAdress(String cep){
+        return adressMapper.adressToAdressDTO(adressFeingService.getAdress(cep));
     }
-
-    public Adress converDTOtoAdress(AdressDTO adressDTO){
-
-        Adress adress = new Adress();
-        adress.setBairro(adressDTO.getBairro());
-        adress.setEstado(adressDTO.getEstado_info().getNome());
-        adress.setCep(adressDTO.getCep());
-        adress.setLogradouro(adressDTO.getLogradouro());
-        adress.setCidade(adressDTO.getCidade());
-
-        return  adress;
-
-    }
-
 
 }

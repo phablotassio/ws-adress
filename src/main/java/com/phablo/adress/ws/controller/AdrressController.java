@@ -1,6 +1,6 @@
 package com.phablo.adress.ws.controller;
 
-import com.phablo.adress.ws.model.Adress;
+import com.phablo.adress.ws.model.dto.AdressDTO;
 import com.phablo.adress.ws.service.AdressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ public class AdrressController {
     private AdressService adressService;
 
     @GetMapping("{cep}")
-    public Adress getCep(@PathVariable String cep) {
+    public AdressDTO getCep(@PathVariable String cep) {
         return adressService.getAdress(cep);
     }
 

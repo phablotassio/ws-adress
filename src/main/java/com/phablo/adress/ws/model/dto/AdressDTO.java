@@ -1,6 +1,5 @@
 package com.phablo.adress.ws.model.dto;
 
-import com.phablo.adress.ws.model.StateInfo;
 
 public class AdressDTO {
 
@@ -8,8 +7,7 @@ public class AdressDTO {
     private String cidade;
     private String logradouro;
     private String bairro;
-    private String uf;
-    private StateInfo estado_info;
+    private String estado;
 
     public String getCep() {
         return cep;
@@ -27,6 +25,7 @@ public class AdressDTO {
         this.cidade = cidade;
     }
 
+
     public String getLogradouro() {
         return logradouro;
     }
@@ -43,19 +42,11 @@ public class AdressDTO {
         this.bairro = bairro;
     }
 
-    public String getUf() {
-        return uf;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setUf(String uf) {
-        this.uf = uf;
-    }
-
-    public StateInfo getEstado_info() {
-        return estado_info;
-    }
-
-    public void setEstado_info(StateInfo estado_info) {
-        this.estado_info = estado_info;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }

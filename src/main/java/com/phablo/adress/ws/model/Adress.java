@@ -1,13 +1,13 @@
 package com.phablo.adress.ws.model;
 
-
 public class Adress {
 
     private String cep;
     private String cidade;
     private String logradouro;
     private String bairro;
-    private String estado;
+    private String uf;
+    private StateInfo estado_info;
 
     public String getCep() {
         return cep;
@@ -25,7 +25,6 @@ public class Adress {
         this.cidade = cidade;
     }
 
-
     public String getLogradouro() {
         return logradouro;
     }
@@ -42,11 +41,19 @@ public class Adress {
         this.bairro = bairro;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getUf() {
+        return uf;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+
+    public StateInfo getEstado_info() {
+        return estado_info;
+    }
+
+    public void setEstado_info(StateInfo estado_info) {
+        this.estado_info = estado_info;
     }
 }
