@@ -1,4 +1,4 @@
-package com.phablo.adress.ws.model.dto;
+package com.address.api.model.dto;
 
 
 public class AdressDTO {

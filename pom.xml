@@ -11,8 +11,8 @@
     <groupId>com.phablo.adress</groupId>
     <artifactId>ws-adress</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ws-adress</name>
-    <description>Web service for adress</description>
+    <name>address.api</name>
+    <description>api for address</description>
 
     <properties>
         <java.version>1.8</java.version>

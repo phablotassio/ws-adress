@@ -1,4 +1,4 @@
-package com.phablo.adress.ws.exceptionhandler;
+package com.address.api.exceptionhandler;
 
 import feign.FeignException;
 import org.springframework.beans.factory.annotation.Autowired;

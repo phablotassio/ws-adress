@@ -1,8 +1,8 @@
-package com.phablo.adress.ws.service;
+package com.address.api.service;
 
-import com.phablo.adress.ws.controller.AdressFeingService;
-import com.phablo.adress.ws.model.dto.AdressDTO;
-import com.phablo.adress.ws.model.mapper.AdressMapper;
+import com.address.api.model.mapper.AdressMapper;
+import com.address.api.controller.AdressFeingService;
+import com.address.api.model.dto.AdressDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

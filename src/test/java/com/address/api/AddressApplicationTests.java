@@ -1,4 +1,4 @@
-package com.phablo.adress.ws;
+package com.address.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class WsAdressApplicationTests {
+public class AddressApplicationTests {
 
     @Test
     public void contextLoads() {

@@ -1,7 +1,7 @@
-package com.phablo.adress.ws.model.mapper;
+package com.address.api.model.mapper;
 
-import com.phablo.adress.ws.model.Adress;
-import com.phablo.adress.ws.model.dto.AdressDTO;
+import com.address.api.model.Adress;
+import com.address.api.model.dto.AdressDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,6 +1,6 @@
-package com.phablo.adress.ws.controller;
+package com.address.api.controller;
 
-import com.phablo.adress.ws.model.Adress;
+import com.address.api.model.Adress;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;

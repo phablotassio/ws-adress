@@ -1,7 +1,7 @@
-package com.phablo.adress.ws.controller;
+package com.address.api.controller;
 
-import com.phablo.adress.ws.model.dto.AdressDTO;
-import com.phablo.adress.ws.service.AdressService;
+import com.address.api.model.dto.AdressDTO;
+import com.address.api.service.AdressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

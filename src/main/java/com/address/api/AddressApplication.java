@@ -1,4 +1,4 @@
-package com.phablo.adress.ws;
+package com.address.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableFeignClients
-public class WsAdressApplication {
+public class AddressApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WsAdressApplication.class, args);
+        SpringApplication.run(AddressApplication.class, args);
     }
 
 }

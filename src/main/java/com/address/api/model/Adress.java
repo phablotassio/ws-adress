@@ -1,4 +1,4 @@
-package com.phablo.adress.ws.model;
+package com.address.api.model;
 
 public class Adress {
 
