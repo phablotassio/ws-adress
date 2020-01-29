@@ -6,6 +6,7 @@ import com.address.api.dto.AddressResponseDTO;
 import com.address.api.exception.MessageErrorImpl;
 import com.address.api.exceptionhandler.AbstractRuntimeException;
 import com.address.api.mapper.AddressMapper;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -33,11 +34,15 @@ public class AddressService {
             throw new AbstractRuntimeException(HttpStatus.BAD_REQUEST, MessageErrorImpl.INVALID_ZIP_CODE);
         }
 
-        AddressClientResponseDto address = addressClient.getAddress(zipCode);
+        AddressClientResponseDto address = addressClient.getAddress(unmaskedZipCode);
 
         if(Objects.nonNull(address.isErro())){
            throw new AbstractRuntimeException(HttpStatus.NOT_FOUND, MessageErrorImpl.ZIP_CODE_NOT_FOUND);
        }
+
+        if(StringUtils.isBlank(address.getComplemento())){
+            address.setComplemento(null);
+        }
 
         return addressMapper.addressToAddressResponseDTO(address);
     }

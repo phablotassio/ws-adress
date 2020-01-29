@@ -10,6 +10,7 @@ public class AddressClientResponseDto {
     private String uf;
     private String ibge;
     private String gia;
+    private String unidade;
     private Boolean erro;
 
     public String getCep() {
@@ -74,6 +75,14 @@ public class AddressClientResponseDto {
 
     public void setGia(String gia) {
         this.gia = gia;
+    }
+
+    public String getUnidade() {
+        return unidade;
+    }
+
+    public void setUnidade(String unidade) {
+        this.unidade = unidade;
     }
 
     public Boolean isErro() {

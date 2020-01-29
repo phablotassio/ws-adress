@@ -1,13 +1,18 @@
 package com.address.api.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AddressResponseDTO {
 
     private String zipCode;
     private String city;
-    private String logradouro;
+    private String street;
     private String neighborhood;
     private String state;
+    private String complement;
+    private String ibgeCode;
 
     public String getZipCode() {
         return zipCode;
@@ -26,12 +31,12 @@ public class AddressResponseDTO {
     }
 
 
-    public String getLogradouro() {
-        return logradouro;
+    public String getStreet() {
+        return street;
     }
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
     public String getNeighborhood() {
@@ -48,5 +53,21 @@ public class AddressResponseDTO {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getComplement() {
+        return complement;
+    }
+
+    public void setComplement(String complement) {
+        this.complement = complement;
+    }
+
+    public String getIbgeCode() {
+        return ibgeCode;
+    }
+
+    public void setIbgeCode(String ibgeCode) {
+        this.ibgeCode = ibgeCode;
     }
 }

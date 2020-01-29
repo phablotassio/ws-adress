@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/zip-code/")
+@RequestMapping("/api/v1/zip-code")
 public class AddressController {
 
     private final AddressService addressService;
@@ -17,7 +17,7 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @GetMapping("{zip-code}")
+    @GetMapping("/{zip-code}")
     public AddressResponseDTO getCep(@PathVariable("zip-code") String zipCode) {
         return addressService.getAddress(zipCode);
     }

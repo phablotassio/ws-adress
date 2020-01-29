@@ -2,6 +2,7 @@ package com.address.api.client;
 
 import com.address.api.dto.AddressClientResponseDto;
 import com.address.api.util.UrlUtils;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -15,6 +16,7 @@ public class AddressClient {
     @Value("${address.host}")
     private String addressHost;
 
+    @Qualifier("restTemplate")
     private RestTemplate restTemplate;
 
     public AddressClient(RestTemplate restTemplate) {
