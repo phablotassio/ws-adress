@@ -8,7 +8,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
 @Mapper(componentModel = "spring")
-public interface AddressMapper {
+public abstract class AddressMapper {
 
     @Mapping(source = "localidade", target = "city")
     @Mapping(source = "cep", target = "zipCode")
@@ -17,10 +17,10 @@ public interface AddressMapper {
     @Mapping(source = "logradouro", target = "street")
     @Mapping(source = "complemento", target = "complement", qualifiedByName = "mapComplement")
     @Mapping(source = "ibge", target = "ibgeCode")
-    AddressResponseDTO addressToAddressResponseDTO(AddressClientResponseDto addressClientResponseDto);
+    public abstract AddressResponseDTO addressToAddressResponseDTO(AddressClientResponseDto addressClientResponseDto);
 
     @Named("mapComplement")
-    default String mapComplement(String complement) {
+    String mapComplement(String complement) {
 
         return StringUtils.isBlank(complement) ? null : complement;
     }
