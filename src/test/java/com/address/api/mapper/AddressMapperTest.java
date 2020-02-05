@@ -28,7 +28,7 @@ class AddressMapperTest {
 
         AddressResponseDTO addressResponseDTO = addressMapper.addressToAddressResponseDTO(addressClientResponseDto);
 
-        assertEquals("73080-100", addressResponseDTO.getZipCode());
+        assertEquals("73080100", addressResponseDTO.getZipCode());
         assertEquals("QMS 55A", addressResponseDTO.getStreet());
         assertEquals("Ao lado do longa", addressResponseDTO.getComplement());
         assertEquals("Setor de Mansões de Sobradinho", addressResponseDTO.getNeighborhood());
@@ -51,7 +51,7 @@ class AddressMapperTest {
 
         AddressResponseDTO addressResponseDTO = addressMapper.addressToAddressResponseDTO(addressClientResponseDto);
 
-        assertEquals("73080-100", addressResponseDTO.getZipCode());
+        assertEquals("73080100", addressResponseDTO.getZipCode());
         assertEquals("QMS 55A", addressResponseDTO.getStreet());
         assertNull(addressResponseDTO.getComplement());
         assertEquals("Setor de Mansões de Sobradinho", addressResponseDTO.getNeighborhood());

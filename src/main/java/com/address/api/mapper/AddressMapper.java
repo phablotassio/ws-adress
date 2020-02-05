@@ -11,7 +11,7 @@ import org.mapstruct.Named;
 public abstract class AddressMapper {
 
     @Mapping(source = "localidade", target = "city")
-    @Mapping(source = "cep", target = "zipCode")
+    @Mapping(target = "zipCode", expression = "java(addressClientResponseDto.getCep().replaceAll(\"\\\\D\", \"\"))")
     @Mapping(source = "uf", target = "state")
     @Mapping(source = "bairro", target = "neighborhood")
     @Mapping(source = "logradouro", target = "street")

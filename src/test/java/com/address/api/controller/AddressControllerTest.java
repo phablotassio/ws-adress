@@ -68,7 +68,7 @@ class AddressControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.zipCode", is("73080-100")))
+                .andExpect(jsonPath("$.zipCode", is("73080100")))
                 .andExpect(jsonPath("$.city", is("Brasília")))
                 .andExpect(jsonPath("$.street", is("QMS 55A")))
                 .andExpect(jsonPath("$.neighborhood", is("Setor de Mansões de Sobradinho")))
